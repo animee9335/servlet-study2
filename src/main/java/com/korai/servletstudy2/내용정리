@@ -1,0 +1,16 @@
+lombok, jackson.databind, core 세팅
+
+리소스를 수정했는데 수정이 안되면 타겟 폴더를 수정해야함.
+Maven -> 수명주기 -> clean
+
+<div></div> 안에 있으면 block
+아니면 inline(글자로 취급)
+
+<% %> 안에는 자바 코드를 작성가능
+<%= %> 표현식
+
+하나의 파일에서 조건문을 이용해 만든 페이지 (Single Page Application) SPA, ex) React
+여러 html파일을 이용해 만든 페이지 (Multiple Page Application) MPA, ex) jsp
+
+서버에서 응답해서 렌더링하는 경우 (Server Side Rendering) SSR, A <-> Server
+클라이언트에 요청하고 클라이언트가 백엔드에서 받아 직접 렌더링하고 돌려주는 경우 (Client Side Rendering)CSR, A -> Client -> BackEnd -> Client -> A
