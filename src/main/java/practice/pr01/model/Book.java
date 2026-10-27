@@ -1,4 +1,4 @@
-package com.korai.servletstudy2.model;
+package practice.pr01.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +9,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Book {
     private int id;
-    private String bookName;
+    private String title;
     private int price;
 
     public Book(Book other) {
         this.id = other.id;
-        this.bookName = other.bookName;
+        this.title = other.title;
         this.price = other.price;
     }
-
 }

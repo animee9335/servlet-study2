@@ -28,10 +28,12 @@ public class UserService {
         userRepository.insert(user);
     }
 
+    // 유저명 중복 검사
     public boolean isDuplicateUsername(String username) {
         return userRepository.findByUsername(username) != null;
     }
 
+    // 복사된 리스트를 가져옴
     public List<User> getUserAll() {
         return userRepository.findAll();
     }

@@ -14,3 +14,10 @@ Maven -> 수명주기 -> clean
 
 서버에서 응답해서 렌더링하는 경우 (Server Side Rendering) SSR, A <-> Server
 클라이언트에 요청하고 클라이언트가 백엔드에서 받아 직접 렌더링하고 돌려주는 경우 (Client Side Rendering)CSR, A -> Client -> BackEnd -> Client -> A
+
+repository 데이터를 관리하는 역할
+service 업무 규칙을 처리하고 검증하는 역할
+controller 응답과 요청을 받는 역할
+
+client <--> controller <--> service <--> repository <--> DB
+            └────────────── server ───────────────┘

@@ -47,6 +47,7 @@ public class UserRepository {
         return users.stream().filter(u -> u.getId() == id).findFirst().orElseGet(()-> null);
     }
 
+    // 리스트를 새로운 리스트에 복사
     public List<User> findAll() {
         return users.stream().map(user -> new User(user)).toList();
     }
