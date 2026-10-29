@@ -29,12 +29,12 @@ public class TrainApiController extends HttpServlet {
         setCors(resp);
         setJson(resp);
 
-        Train train = objectMapper.readValue(req.getInputStream(), Train.class);
+        Train train = objectMapper.readValue(req.getInputStream(), Train.class); // 요청받은 내용 확인, getInputStream() body를 받아오기 위한 통로
         trainService.register(train);
         System.out.println(train);
 
-        String json = objectMapper.writeValueAsString(train);
-        resp.getWriter().write(json);
+        String json = objectMapper.writeValueAsString(train); // json문자열로 변환
+        resp.getWriter().println(json); // getWriter() body를 보내기 위한 통로
     }
 
     @Override
@@ -43,7 +43,7 @@ public class TrainApiController extends HttpServlet {
         setJson(resp);
 
         List<Train> trainList = trainService.getTrainAll();
-        resp.getWriter().write(objectMapper.writeValueAsString(trainList)); // 리스트를 문자열로 바꿔서 응답.
+        resp.getWriter().println(objectMapper.writeValueAsString(trainList)); // 리스트를 문자열로 바꿔서 응답.
     }
 
     @Override
